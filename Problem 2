@@ -1,0 +1,11 @@
+import pandas as pd
+data = pd.read_csv("cars.csv")
+df = pd.DataFrame(data)
+
+H = df.loc[df["Model"]=="Mazda RX4"]
+
+K = df[df["Model"]=="Camaro Z28"].loc[:,"cyl"]
+
+D1 = df[df["Model"]=="Camaro Z28"].loc[:,["cyl","gear"]]
+D2 = df[df["Model"]=="Ford Pantera L"].loc[:,["cyl","gear"]]
+D3 = df[df["Model"]=="Honda Civic"].loc[:,["cyl","gear"]]
